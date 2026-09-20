@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "language": "zh-CN",
+  "default_mode": "deep",
+  "technical_term_policy": "保留英文术语；首次出现时可给中文解释",
+  "default_outputs": [
+    "00_one_page.md",
+    "01_deep_note.md",
+    "mindmap.mmd",
+    "deck_storyboard.md"
+  ],
+  "evidence_policy": {
+    "require_location": true,
+    "minimum_key_claims": 8,
+    "target_citation_coverage": 0.9,
+    "distinguish_paper_claim_and_assessment": true
+  },
+  "reading_profiles": {
+    "agent": {
+      "checklist": "paper_reading/AGENT_ROBOTICS_TAXONOMY.md#agent-论文",
+      "focus": [
+        "environment",
+        "state_action_observation",
+        "planning",
+        "memory",
+        "tool_use",
+        "training",
+        "evaluation",
+        "cost_and_safety"
+      ]
+    },
+    "robotics": {
+      "checklist": "paper_reading/AGENT_ROBOTICS_TAXONOMY.md#机器人--具身智能论文",
+      "focus": [
+        "embodiment",
+        "sensing",
+        "action_space",
+        "policy",
+        "data",
+        "simulation",
+        "real_world",
+        "generalization",
+        "safety_and_latency"
+      ]
+    },
+    "general": {
+      "checklist": null,
+      "focus": [
+        "problem",
+        "method",
+        "experiments",
+        "ablation",
+        "limitations",
+        "reproducibility"
+      ]
+    }
+  },
+  "output_style": {
+    "paragraph_depth": "medium",
+    "use_tables_for_comparison": true,
+    "use_diagrams_for_pipelines": true,
+    "prefer_figure_over_decoration": true
+  }
+}

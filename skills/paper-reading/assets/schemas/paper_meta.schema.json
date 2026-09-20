@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Paper Metadata",
+  "type": "object",
+  "required": [
+    "paper_id",
+    "title",
+    "domain",
+    "status",
+    "source",
+    "created_at"
+  ],
+  "properties": {
+    "paper_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "year": {
+      "type": ["integer", "null"]
+    },
+    "venue": {
+      "type": ["string", "null"]
+    },
+    "domain": {
+      "enum": ["agent", "robotics", "general"]
+    },
+    "paper_type": {
+      "enum": ["method", "system", "benchmark", "survey", "position", "empirical", "unknown"]
+    },
+    "status": {
+      "enum": ["inbox", "parsing", "reading", "deep_read", "reviewed", "archived"]
+    },
+    "source": {
+      "type": "object",
+      "required": ["url_or_path"],
+      "properties": {
+        "url_or_path": {
+          "type": "string"
+        },
+        "arxiv_id": {
+          "type": ["string", "null"]
+        },
+        "doi": {
+          "type": ["string", "null"]
+        },
+        "version": {
+          "type": ["string", "null"]
+        },
+        "accessed_at": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": ["string", "null"]
+        },
+        "data": {
+          "type": ["string", "null"]
+        },
+        "project_page": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

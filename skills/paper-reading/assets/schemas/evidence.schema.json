@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Paper Evidence Record",
+  "type": "object",
+  "required": [
+    "claim",
+    "origin",
+    "evidence_type",
+    "location",
+    "quote_or_paraphrase",
+    "confidence"
+  ],
+  "properties": {
+    "claim": {
+      "type": "string",
+      "minLength": 1
+    },
+    "origin": {
+      "enum": ["paper_claim", "our_assessment", "external_context"]
+    },
+    "evidence_type": {
+      "enum": [
+        "problem",
+        "assumption",
+        "method",
+        "implementation",
+        "dataset",
+        "metric",
+        "result",
+        "ablation",
+        "limitation",
+        "reproduction",
+        "claim"
+      ]
+    },
+    "location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quote_or_paraphrase": {
+      "type": "string",
+      "minLength": 1
+    },
+    "value": {
+      "type": ["string", "number", "null"]
+    },
+    "confidence": {
+      "enum": ["high", "medium", "low", "unverified"]
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  },
+  "additionalProperties": true
+}

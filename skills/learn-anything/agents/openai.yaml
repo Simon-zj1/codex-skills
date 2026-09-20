@@ -1,0 +1,7 @@
+interface:
+  display_name: "Learn Anything"
+  short_description: "把 Codex 当私人老师，用六步法系统学会一个新领域"
+  default_prompt: "用 $learn-anything 帮我从零开始系统学习一个新领域，先给我学习阶梯和过关标准。"
+
+policy:
+  allow_implicit_invocation: false
